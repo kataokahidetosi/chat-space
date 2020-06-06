@@ -33,3 +33,13 @@
 ### Association
 - belong_to :user
 - belongs_to :group
+
+## groups_postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|user_id|integer|nul: false|
+|group_id|integer|null: false|
+### Association
+- belongs_to :user
+- belongs_to :group
