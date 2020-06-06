@@ -3,6 +3,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|id|integer|null: false|
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
@@ -13,6 +14,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|id|integer｜null: false｜
 |group_name|string|null: false|
 |user_id|integer|null: false foreign_key|
 ### Association
@@ -25,6 +27,7 @@
 |------|----|-------|
 |body|text|null: false|
 |image|string|null: false|
+|time|timestamp|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
