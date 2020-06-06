@@ -19,7 +19,7 @@
 |name|string|null: false|
 |user_id|integer|null: false foreign_key :true|
 ### Association
-- belongs_to :user,through :groups_users
+- has_many :user,through :groups_users
 - has_many :posts
 - has_many :groups_users
 
@@ -29,6 +29,8 @@
 |------|----|-------|
 |body|text|null: true|
 |image|string|null: true|
+|user_id|integer|null :false foreign_key :true|
+|group_id|integer|null :false foreign_key :true|
 ### Association
 - belong_to :user
 - belongs_to :group
