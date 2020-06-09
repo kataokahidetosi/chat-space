@@ -1,0 +1,41 @@
+.chat
+  .right_header
+    .right_header__group
+      .right_header__group_name
+        techcamp
+      %ul.right_header__group__list
+        Member :
+        %li.right_header__group__list__name
+          name
+    %ul.right_header__edit
+      = link_to "#", class: 'right_header__edit__btn' do
+        edit
+  .messagefield
+    .messagefield__box
+      .messagefield__box__info
+        .messagefield__box__info__username
+          name
+        .messagefield__box__info__date
+          2020年06月08日 00時14分
+      .messagefield__box__comment
+        .messagefield__box__comment__content
+          hello
+
+
+    .messagefield__box
+      .messagefield__box__info
+        .messagefield__box__info__username
+          masa
+        .messagefield__box__info__date
+          2020年06月08日 00時14分
+      .messagefield__box__comment
+        .messagefield__box__comment__content
+          morning!
+  .form
+    %form.new_message
+      .input-box
+        %input{ class: "input-box__text", placeholder: "type a message", type: "text" }
+        %label{ class: "input-box__image"}
+          =icon("fas", "image")
+          %input{ type: "file", class: "input-box__image__file"}
+      %input{ class: "submit-btn", type: "submit", value: "Send" }

@@ -1,0 +1,23 @@
+.side_bar
+  .side__header
+    .side__box
+      .side__box__name
+      %ul.side__box__menu
+        %li.side__box__menu__new
+          = link_to "/groups/new" do
+            = icon('fas','edit', class:"side__box__menu__icon")
+        %li.side__box__menu__edit
+          = link_to "/users/1128/edit" do
+            = icon('fas','cog', class:"side__box__menu__icon")
+  .side_bar_group_list
+    .group
+      .group-name
+        %p techcap
+      .group_message
+        %p hello
+    .group
+      .group-name
+        %p techexpet
+      .group_message
+        %p まだメッセージはありません
+
