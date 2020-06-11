@@ -10,17 +10,12 @@
         %li.side__box__menu__edit
           = link_to edit_user_path(current_user) do
             = icon('fas','cog', class:"side__box__menu__icon")
+
   .side_bar_group_list
     - current_user.groups.each do |group|
-    .group
-      = link_to '#' do
-      .group-name
-        = group.name
-      .group_message
-        %p hello
-    .group
-      .group-name
-        %p techexpet
-      .group_message
-        %p まだメッセージはありません
-
+      = link_to group_messages_path(group) do
+        .Group
+          .Group-name
+            = group.name
+          .Group_message
+            = group.show_last_message

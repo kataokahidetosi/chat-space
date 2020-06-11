@@ -28,6 +28,7 @@
   background-color: #fafafa;
   height: calc(100vh - 190px);
   padding: 35px 40px 0;
+  overflow: scroll;
   &__box{
     margin-bottom: 46px;
     &__comment__content{
@@ -159,7 +160,7 @@
   }
 }
 
-.group{
+.Group{
   padding: 20px 20px 20px 40px;
   &-name{
     font-size: 15px;
@@ -173,6 +174,8 @@
   }
 }
 
-
+a{
+  text-decoration: none;
+}
 
 
