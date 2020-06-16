@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="messagefield__box">
+        `<div class="messagefield__box" data-message-id=${message.id}>
           <div class="messagefield__box__info">
             <div class="messagefield__box__info__username">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="messagefield__box">
+      `<div class="messagefield__box" data-message-id=${message.id}>
         <div class="messagefield__box__info">
           <div class="messagefield__box__info__username">
             ${message.user_name}
@@ -43,6 +43,7 @@ $(function(){
     e.preventDefault()
     let formData = new FormData(this);
     let url = $(this).attr('action');
+    $('.submit-btn'). removeAttr('data-disable-with');
     $.ajax({
       url: url,
       type: "POST",
