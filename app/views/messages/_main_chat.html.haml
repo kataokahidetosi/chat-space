@@ -13,20 +13,10 @@
         .right_header__edit__btn 
           edit
        
-        -# = btn(class:"right_header__edit__btn")
-          edit
+        
   .messagefield
     = render @messages
-    -# .messagefield__box
-    -#   .messagefield__box__info
-    -#     .messagefield__box__info__username
-    -#       name
-    -#     .messagefield__box__info__date
-    -#       2020年06月08日 00時14分
-    -#   .messagefield__box__comment
-    -#     .messagefield__box__comment__content
-    -#       hello
-
+    
   .form
     =form_with model: [@group, @message], html: {class: "new_message"}, local: true do |f|
       .input-box
